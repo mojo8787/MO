@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Store</title>
+  <style>
+    /* General styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('B.png');
+      background-size: cover;
+    }
+
+    /* Header styles */
+    header {
+      text-align: center;
+      background-color: #f2f2f2;
+      padding: 10px;
+    }
+
+    /* Logo styles */
+    .logo {
+      width: 200px;
+    }
+
+    /* Search Bar */
+    #search-bar {
+      text-align: center;
+      margin: 20px;
+    }
+
+    /* Products styles */
+    #products {
+      text-align: center;
+    }
+
+    .product {
+      display: inline-block;
+      margin: 20px;
+    }
+
+    /* Product image sizing */
+    .product img {
+      max-width: 150px;
+      max-height: 150px;
+      width: auto;
+      height: auto;
+    }
+
+    /* Hover effect for product images */
+    .product img:hover {
+      transform: scale(1.1);
+      transition: transform 0.3s ease;
+    }
+
+    /* Language Toggle */
+    #language-toggle {
+      text-align: right;
+      margin: 10px;
+    }
+
+    /* Facebook info styles */
+    .facebook-info {
+      margin-top: 40px;
+    }
+
+    /* Footer styles */
+    footer {
+      background-color: #f2f2f2;
+      text-align: center;
+      padding: 10px;
+    }
+
+    /* Hide additional info by default */
+    .hidden {
+      display: none;
+    }
+  </style>
+  <script>
+    function toggleInfo(id) {
+      var element = document.getElementById(id);
+      if (element.style.display === "none" || element.style.display === "") {
+        element.style.display = "block";
+      } else {
+        element.style.display = "none";
+      }
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Language Toggle -->
+  <div id="language-toggle">
+    <button onclick="changeLanguage('en')">EN</button>
+    <button onclick="changeLanguage('ar')">AR</button>
+  </div>
+
+  <!-- Header and Logo -->
+  <header>
+    <h1>
+      <img src="images/logo.jpeg" alt="Your Store Logo" class="logo">
+    </h1>
+  </header>
+
+  <!-- Search Bar -->
+  <section id="search-bar">
+    <input type="text" placeholder="Search for products...">
+  </section>
+
+  <!-- Products Section -->
+  <section id="products">
+    <!-- Product 1 -->
+    <div class="product">
+      <img src="images/1.png" alt="Product 1" onclick="toggleInfo('product1-info')">
+      <div id="product1-info" class="hidden">
+        <p>Product 1: This is a high-quality hearing aid device with noise-cancelling features.</p>
+      </div>
+    </div>
+    <!-- Product 2 -->
+    <div class="product">
+      <img src="images/2.png" alt="Product 2" onclick="toggleInfo('product2-info')">
+      <div id="product2-info" class="hidden">
+        <p>Product 2: Ideal for outdoor activities, water-resistant and durable.</p>
+      </div>
+    </div>
+    <!-- Product 3 -->
+    <div class="product">
+      <img src="images/3.jpg" alt="Product 3" onclick="toggleInfo('product3-info')">
+      <div id="product3-info" class="hidden">
+        <p>Product 3: Features a long-lasting battery and a comfortable fit.</p>
+      </div>
+    </div>
+    <!-- Product 4 -->
+    <div class="product">
+      <img src="images/4.jpg" alt="Product 4" onclick="toggleInfo('product4-info')">
+      <div id="product4-info" class="hidden">
+        <p>Product 4: Designed for users who prioritize aesthetics along with functionality.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facebook Information -->
+  <div class="facebook-info">
+    <h2>Follow Us on Facebook</h2>
+    <a href="https://www.facebook.com/profile.php?id=100084960971893">
+      <img src="images/FB_logo.png" alt="Facebook Logo" width="50">
+    </a>
+    <p>مؤسسة الباكورة للحلول السمعية</p>
+    <p>465 likes • 498 followers</p>
+    <p>سمع افضل لحياة افضل</p>
+    <p>Amman, Jordan</p>
+    <p>+962 7 9060 4853</p>
+    <p><a href="http://sonici.com">sonici.com</a></p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div>
+      <h3>Contact Us</h3>
+      <address>
+        <p>Email: info@albakura.net</p>
+        <p>Phone: +962 7 9060 4853</p>
+      </address>
+    </div>
+    <div>
+      <h3>Follow Us</h3>
+      <a href="https://twitter.com/" aria-label="Twitter">Twitter</a> |
+      <a href="https://instagram.com/" aria-label="Instagram">Instagram</a>
+    </div>
+    <div>
+      <h3>Subscribe to Our Newsletter</h3>
+      <form action="subscribe.php" method="post">
+        <input type="email" name="email" placeholder="Your email address">
+        <select name="interests">
+          <option value="all">All</option>
+          <option value="electronics">Electronics</option>
+          <option value="fashion">Fashion</option>
+        </select>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </footer>
+
+  <!-- JavaScript to handle language toggle -->
+  <script>
+    function changeLanguage(lang) {
+      // Implement your language switch logic here
+    }
+  </script>
+
+</body>
+</html>
